@@ -1,5 +1,5 @@
 # Render Infrastructure as Code configuration
-# This file configures deployment for the Astro site in the monorepo
+# This file configures deployment for the Astro site in the monorepo.
 
 services:
   - type: static_site
