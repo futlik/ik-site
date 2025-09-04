@@ -1,0 +1,21 @@
+// .devcontainer/devcontainer.json
+{
+  "name": "Astro (Node 22)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "22" }
+  },
+  "forwardPorts": [4321],
+  "portsAttributes": {
+    "4321": { "label": "Astro dev server" }
+  },
+  "_postCreateCommand": "corepack enable && npm ci || true",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astro-build.vscode-astro",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
