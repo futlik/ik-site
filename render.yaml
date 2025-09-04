@@ -1,0 +1,14 @@
+# Render Infrastructure as Code configuration
+# This file configures deployment for the Astro site in the monorepo.
+
+services:
+  - type: static_site
+    name: site-astro
+    rootDir: site-astro
+    buildCommand: npm ci && npm run build
+    publishPath: dist
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+    pullRequestPreviewsEnabled: true
+
